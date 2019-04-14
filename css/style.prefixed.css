@@ -336,4 +336,24 @@ template {
 [hidden] {
   display: none;
 }
+
+.carousel-cell {
+  width: 100%;
+  height: 80%;
+  min-height: 250px;
+}
+
+.carousel-cell .container {
+  width: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-cell .container p {
+  text-align: center;
+}
+
+.carousel-links {
+  text-align: center;
+}
 /*# sourceMappingURL=style.prefixed.css.map */

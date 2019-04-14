@@ -10,3 +10,10 @@ var flkty = new Flickity(elem, {
 var flkty = new Flickity('.main-carousel', {
     // options
 });
+
+// vanilla JS
+var flkty = new Flickity('.carousel', {
+    hash: true,
+});
+
+data - flickity = '{ "pageDots": false }';
