@@ -1,19 +1,24 @@
 var elem = document.querySelector('.main-carousel');
+var reloadBtn = document.querySelector('.reload-btn');
+var progressBar = document.querySelector('.progress-bar');
+
 var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
     contain: true
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity('.main-carousel', {
-    // options
-});
-
 // vanilla JS
-var flkty = new Flickity('.carousel', {
+var flkty = new Flickity('.main-carousel', {
     hash: true,
+    pageDots: false,
 });
 
-data - flickity = '{ "pageDots": false }';
+
+//flkty.reloadCells();
+
+
+flkty.on('scroll', function (progress) {
+    progress = Math.max(0, Math.min(1, progress));
+    progressBar.style.width = progress * 100 + '%';
+});
