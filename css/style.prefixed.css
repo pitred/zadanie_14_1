@@ -356,4 +356,22 @@ template {
 .carousel-links {
   text-align: center;
 }
+
+.flickity-page-dots {
+  display: none;
+}
+
+.reload-btn {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.progress-bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+}
 /*# sourceMappingURL=style.prefixed.css.map */

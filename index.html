@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="main-carousel" data-flickity='{ "pageDots": false }'>
+  <div class="main-carousel">
     <div class="carousel-cell" id="carousel-cell1">
       <div class="container">
         <p>Cell 1</p>
@@ -48,6 +48,8 @@
       </div>
     </div>
   </div>
+  <div class="progress-bar"></div>
+  <button class="reload-btn" type="reset">Rstart</button>
   <div class="carousel-links">
     <p>
       <a href="#carousel-cell1">Cell 1</a>,
@@ -58,8 +60,8 @@
     </p>
   </div>
 
+  <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
   <script src="vendor/flickity.pkgd.min.js"></script>
-  <script src="vendor/hash.js"></script>
   <script src="js/script.js"></script>
 </body>
 
