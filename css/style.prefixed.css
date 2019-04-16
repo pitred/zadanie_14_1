@@ -351,6 +351,10 @@ template {
 
 .carousel-cell .container p {
   text-align: center;
+  position: relative;
+  top: 70px;
+  color: #fff;
+  font-size: 20px;
 }
 
 .carousel-links {
