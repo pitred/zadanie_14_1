@@ -5,17 +5,14 @@ var progressBar = document.querySelector('.progress-bar');
 var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
-    contain: true
-});
-
-// vanilla JS
-var flkty = new Flickity('.main-carousel', {
+    contain: true,
     hash: true,
     pageDots: false,
 });
 
-
-//flkty.reloadCells();
+reloadBtn.addEventListener('click', function () {
+    flkty.select(0);
+});
 
 
 flkty.on('scroll', function (progress) {

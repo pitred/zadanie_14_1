@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="vendor/flickity.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-  <link rel="stylesheet" href="vendor/flickity.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <div class="main-carousel">
+      <div class="carousel-cell" id="carousel-cell1">
+        <div class="container">
+          <p>Cell 1</p>
+          <img
+            src="https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg"
+            alt="beach 1"
+            style="background-size: cover; width: 100%;"
+          />
+        </div>
+      </div>
+      <div class="carousel-cell" id="carousel-cell2">
+        <div class="container">
+          <p>Cell 2</p>
+          <img
+            src="https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg"
+            alt="beach 2"
+            style="background-size: cover; width: 100%;"
+          />
+        </div>
+      </div>
+      <div class="carousel-cell" id="carousel-cell3">
+        <div class="container">
+          <p>Cell 3</p>
+          <img
+            src="https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg"
+            alt="beach 3"
+            style="background-size: cover; width: 100%;"
+          />
+        </div>
+      </div>
+      <div class="carousel-cell" id="carousel-cell4">
+        <div class="container">
+          <p>Cell 4</p>
+          <img
+            src="https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg"
+            alt="beach 4"
+            style="background-size: cover; width: 100%;"
+          />
+        </div>
+      </div>
+      <div class="carousel-cell" id="carousel-cell5">
+        <div class="container">
+          <p>Cell 5</p>
+          <img
+            src="https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg"
+            alt="beach 5"
+            style="background-size: cover; width: 100%;"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar"></div>
+    <button class="reload-btn" type="reset">Rstart</button>
+    <div class="carousel-links">
+      <p>
+        <a href="#carousel-cell1">Cell 1</a>,
+        <a href="#carousel-cell2">Cell 2</a>,
+        <a href="#carousel-cell3">Cell 3</a>,
+        <a href="#carousel-cell4">Cell 4</a>,
+        <a href="#carousel-cell5">Cell 5</a>
+      </p>
+    </div>
 
-<body>
-  <div class="main-carousel">
-    <div class="carousel-cell" id="carousel-cell1">
-      <div class="container">
-        <p>Cell 1</p>
-        <img src="https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg" alt="beach 1"
-          style="background-size: cover; width: 100%;" />
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell2">
-      <div class="container">
-        <p>Cell 2</p>
-        <img src="https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg" alt="beach 2"
-          style="background-size: cover; width: 100%;" />
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell3">
-      <div class="container">
-        <p>Cell 3</p>
-        <img src="https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg" alt="beach 3"
-          style="background-size: cover; width: 100%;" />
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell4">
-      <div class="container">
-        <p>Cell 4</p>
-        <img src="https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg" alt="beach 4"
-          style="background-size: cover; width: 100%;" />
-      </div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell5">
-      <div class="container">
-        <p>Cell 5</p>
-        <img src="https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg" alt="beach 5"
-          style="background-size: cover; width: 100%;" />
-      </div>
-    </div>
-  </div>
-  <div class="progress-bar"></div>
-  <button class="reload-btn" type="reset">Rstart</button>
-  <div class="carousel-links">
-    <p>
-      <a href="#carousel-cell1">Cell 1</a>,
-      <a href="#carousel-cell2">Cell 2</a>,
-      <a href="#carousel-cell3">Cell 3</a>,
-      <a href="#carousel-cell4">Cell 4</a>,
-      <a href="#carousel-cell5">Cell 5</a>
-    </p>
-  </div>
-
-  <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
-  <script src="vendor/flickity.pkgd.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
