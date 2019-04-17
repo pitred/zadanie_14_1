@@ -15,7 +15,7 @@
         <div class="container">
           <p>Cell 1</p>
           <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg"
+            src="{{ image }}"
             alt="beach 1"
             style="background-size: cover; width: 100%;"
           />
@@ -74,8 +74,20 @@
       </p>
     </div>
 
+    <script>
+      var cellData = [
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg",
+          title: "Beach 1",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        }
+      ];
+    </script>
+
     <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
     <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="vendor/mustache.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
