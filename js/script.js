@@ -2,6 +2,21 @@ var elem = document.querySelector('.main-carousel');
 var reloadBtn = document.querySelector('.reload-btn');
 var progressBar = document.querySelector('.progress-bar');
 
+var templateItem = document.getElementById('template-product-item').innerHTML;
+
+Mustache.parse(templateItem);
+
+var listItems = '';
+
+for (var i = 0; i < cellData.length; i++) {
+    console.log(cellData);
+    listItems += Mustache.render(templateItem, cellData[i]);
+}
+
+results.insertAdjacentHTML('beforeend', listItems);
+
+
+// carusel
 var flkty = new Flickity(elem, {
     // options
     cellAlign: 'left',
