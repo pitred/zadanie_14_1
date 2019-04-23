@@ -11,23 +11,18 @@
 </head>
 
 <body>
-  <div class="main-carousel">
-    <div class="carousel-cell" id="carousel-cell1">
-      <div class="container" id="results"></div>
+  <div class="main-carousel" id="results"></div>
+
+  <script id="template-item" type="x-tmpl-mustache">
+    <div class="carousel-cell" id="{{ cell }}">
+      <img src = {{ image }} {{{ style }}}"/>
+      <div class="container">
+        <h1>{{ title }}</h1>
+        {{{ description }}}
+      </div>
     </div>
-    <div class="carousel-cell" id="carousel-cell2">
-      <div class="container"></div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell3">
-      <div class="container"></div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell4">
-      <div class="container"></div>
-    </div>
-    <div class="carousel-cell" id="carousel-cell5">
-      <div class="container"></div>
-    </div>
-  </div>
+  </script>
+
   <div class="progress-bar"></div>
   <button class="reload-btn" type="reset">Rstart</button>
   <div class="carousel-links">
@@ -40,43 +35,49 @@
     </p>
   </div>
 
-  <script id="template-product-item" type="x-tmpl-mustache">
-    <h1>{{ title }}</h1>
-    {{{ description }}}
-    <img src = {{ image }} style="background-size: cover; width: 100%;"/>
-  </script>
+
 
   <script>
     var cellData = [{
         image: "https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg",
+        style: 'style="background-size: cover; width: 100%;"',
         title: "Beach 1",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+        cell: "carousel-cell1"
       },
       {
         image: "https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg",
+        style: 'style="background-size: cover; width: 100%;"',
         title: "Beach 2",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+        cell: "carousel-cell2"
       },
       {
         image: "https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg",
+        style: 'style="background-size: cover; width: 100%;"',
         title: "Beach 3",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+        cell: "carousel-cell3"
       },
       {
         image: "https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg",
+        style: 'style="background-size: cover; width: 100%;"',
         title: "Beach 4",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+        cell: "carousel-cell4"
       },
       {
         image: "https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg",
+        style: 'style="background-size: cover; width: 100%;"',
         title: "Beach 5",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>'
+        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+        cell: "carousel-cell5"
       }
     ];
   </script>
 
-  <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
   <script src="vendor/flickity.pkgd.min.js"></script>
+  <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
   <script src="vendor/mustache.min.js"></script>
   <script src="js/script.js"></script>
 </body>

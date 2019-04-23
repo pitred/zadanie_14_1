@@ -1,8 +1,7 @@
 var elem = document.querySelector('.main-carousel');
 var reloadBtn = document.querySelector('.reload-btn');
 var progressBar = document.querySelector('.progress-bar');
-
-var templateItem = document.getElementById('template-product-item').innerHTML;
+var templateItem = document.getElementById('template-item').innerHTML;
 
 Mustache.parse(templateItem);
 
