@@ -339,12 +339,11 @@ template {
 
 .carousel-cell {
   width: 100%;
-  height: 80%;
+  height: calc(50vh - 10px);
   min-height: 250px;
 }
 
 .carousel-cell .container {
-  width: 1200px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -373,5 +372,10 @@ template {
   height: 20px;
   width: 0;
   background: #333;
+}
+
+#map {
+  width: 100%;
+  height: calc(50vh - 10px);
 }
 /*# sourceMappingURL=style.prefixed.css.map */

@@ -1,85 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="vendor/flickity.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-  <link rel="stylesheet" href="vendor/flickity.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body>
+    <div class="main-carousel" id="results"></div>
 
-<body>
-  <div class="main-carousel" id="results"></div>
-
-  <script id="template-item" type="x-tmpl-mustache">
-    <div class="carousel-cell" id="{{ cell }}">
-      <img src = {{ image }} {{{ style }}}"/>
-      <div class="container">
-        <h1>{{ title }}</h1>
-        {{{ description }}}
+    <script id="template-item" type="x-tmpl-mustache">
+      <div class="carousel-cell" id="{{ cell }}">
+        <img src = {{ image }} {{{ style }}}"/>
+        <div class="container">
+          <h1>{{ title }}</h1>
+        </div>
       </div>
+    </script>
+
+    <div class="progress-bar"></div>
+    <button class="reload-btn" type="reset">Rstart</button>
+    <!-- <div class="carousel-links">
+      <p>
+        <a href="#carousel-cell1">Cell 1</a>,
+        <a href="#carousel-cell2">Cell 2</a>,
+        <a href="#carousel-cell3">Cell 3</a>,
+        <a href="#carousel-cell4">Cell 4</a>,
+        <a href="#carousel-cell5">Cell 5</a>
+      </p>
+    </div> -->
+
+    <div id="map">
+      <p id="infos"></p>
     </div>
-  </script>
 
-  <div class="progress-bar"></div>
-  <button class="reload-btn" type="reset">Rstart</button>
-  <div class="carousel-links">
-    <p>
-      <a href="#carousel-cell1">Cell 1</a>,
-      <a href="#carousel-cell2">Cell 2</a>,
-      <a href="#carousel-cell3">Cell 3</a>,
-      <a href="#carousel-cell4">Cell 4</a>,
-      <a href="#carousel-cell5">Cell 5</a>
-    </p>
-  </div>
+    <script>
+      var cellData = [
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Beach 1",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/100x100" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell1",
+          coords: { lat: -25.363, lng: 131.044 }
+        },
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Beach 2",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell2"
+        },
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Beach 3",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell3"
+        },
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Beach 4",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell4"
+        },
+        {
+          image: "https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Beach 5",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell5"
+        }
+      ];
+    </script>
 
-
-
-  <script>
-    var cellData = [{
-        image: "https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg",
-        style: 'style="background-size: cover; width: 100%;"',
-        title: "Beach 1",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-        cell: "carousel-cell1"
-      },
-      {
-        image: "https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg",
-        style: 'style="background-size: cover; width: 100%;"',
-        title: "Beach 2",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-        cell: "carousel-cell2"
-      },
-      {
-        image: "https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg",
-        style: 'style="background-size: cover; width: 100%;"',
-        title: "Beach 3",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-        cell: "carousel-cell3"
-      },
-      {
-        image: "https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg",
-        style: 'style="background-size: cover; width: 100%;"',
-        title: "Beach 4",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-        cell: "carousel-cell4"
-      },
-      {
-        image: "https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg",
-        style: 'style="background-size: cover; width: 100%;"',
-        title: "Beach 5",
-        description: '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
-        cell: "carousel-cell5"
-      }
-    ];
-  </script>
-
-  <script src="vendor/flickity.pkgd.min.js"></script>
-  <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
-  <script src="vendor/mustache.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="vendor/mustache.min.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4ZdoWy-FqaiKTXgNe6LtHmIuXis_c2Bs&callback=initMap"
+    ></script>
+  </body>
 </html>
