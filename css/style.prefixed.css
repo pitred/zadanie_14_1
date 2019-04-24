@@ -377,5 +377,14 @@ template {
 #map {
   width: 100%;
   height: calc(50vh - 10px);
+  position: relative;
+}
+
+#infos {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  color: red;
+  text-align: center;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
