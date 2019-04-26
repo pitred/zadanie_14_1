@@ -42,20 +42,15 @@ window.initMap = function () {
     });
 
     var marker = [];
-    for (var i = 0; i < cellData.length; i++) {
+    for (let i = 0; i < cellData.length; i++) {
         marker[i] = new google.maps.Marker({
             position: cellData[i].coords,
             map: map
         });
-        marker[i].addListener("click", markMove(i));
-    }
-
-    function markMove(i) {
-        return function () {
+        marker[i].addListener("click", function(){
             flkty.select(i);
-        }
+        });
     }
-
 
     flkty.on('change', function (index) {
         smoothPanAndZoom(map, 7, cellData[index].coords);
