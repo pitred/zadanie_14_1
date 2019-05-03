@@ -1,3 +1,3 @@
 PUBLISH : 
 
-https://pitred.github.io/zadanie_14_1/.
+https://pitred.github.io/zadanie_14_1/. 
