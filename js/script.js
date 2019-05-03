@@ -16,7 +16,7 @@ for (var i = 0; i < cellData.length; i++) {
 
 results.insertAdjacentHTML("beforeend", listItems);
 
-// Carusel
+// Carousel
 var flkty = new Flickity(elem, {
     // options
     cellAlign: "left",
@@ -47,7 +47,7 @@ window.initMap = function () {
             position: cellData[i].coords,
             map: map
         });
-        marker[i].addListener("click", function(){
+        marker[i].addListener("click", function () {
             flkty.select(i);
         });
     }
