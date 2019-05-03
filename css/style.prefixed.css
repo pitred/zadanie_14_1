@@ -339,22 +339,24 @@ template {
 
 .carousel-cell {
   width: 100%;
-  height: 80%;
+  height: calc(50vh - 10px);
   min-height: 250px;
 }
 
 .carousel-cell .container {
-  width: 1200px;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
 }
 
-.carousel-cell .container p {
-  text-align: center;
-  position: relative;
-  top: 70px;
+.carousel-cell .container h1 {
+  position: absolute;
+  top: -180px;
   color: #fff;
-  font-size: 20px;
+  font-size: 100px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 5px 5px #333;
 }
 
 .carousel-links {
@@ -373,5 +375,23 @@ template {
   height: 20px;
   width: 0;
   background: #333;
+}
+
+img {
+  height: 100%;
+}
+
+#map {
+  width: 100%;
+  height: calc(50vh - 10px);
+  position: relative;
+}
+
+#infos {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  color: red;
+  text-align: center;
 }
 /*# sourceMappingURL=style.prefixed.css.map */
