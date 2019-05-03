@@ -10,61 +10,20 @@
   </head>
 
   <body>
-    <div class="main-carousel">
-      <div class="carousel-cell" id="carousel-cell1">
-        <div class="container">
-          <p>Cell 1</p>
-          <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/LD4NXVRRBL.jpg"
-            alt="beach 1"
-            style="background-size: cover; width: 100%;"
-          />
+    <div class="main-carousel" id="results"></div>
+
+    <script id="template-item" type="x-tmpl-mustache">
+      <div class="carousel-cell" id="{{ cell }}">
+          <img src = {{ image }} {{{ style }}}"/>
+          <div class="container">
+            <h1>{{ title }}</h1>
+          </div>
         </div>
-      </div>
-      <div class="carousel-cell" id="carousel-cell2">
-        <div class="container">
-          <p>Cell 2</p>
-          <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/U53WYVF6H5.jpg"
-            alt="beach 2"
-            style="background-size: cover; width: 100%;"
-          />
-        </div>
-      </div>
-      <div class="carousel-cell" id="carousel-cell3">
-        <div class="container">
-          <p>Cell 3</p>
-          <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/AMXMQQWNQJ.jpg"
-            alt="beach 3"
-            style="background-size: cover; width: 100%;"
-          />
-        </div>
-      </div>
-      <div class="carousel-cell" id="carousel-cell4">
-        <div class="container">
-          <p>Cell 4</p>
-          <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/HBIZZDRVEB.jpg"
-            alt="beach 4"
-            style="background-size: cover; width: 100%;"
-          />
-        </div>
-      </div>
-      <div class="carousel-cell" id="carousel-cell5">
-        <div class="container">
-          <p>Cell 5</p>
-          <img
-            src="https://cdn.stocksnap.io/img-thumbs/960w/9RH6AAYIDP.jpg"
-            alt="beach 5"
-            style="background-size: cover; width: 100%;"
-          />
-        </div>
-      </div>
-    </div>
+    </script>
+
     <div class="progress-bar"></div>
     <button class="reload-btn" type="reset">Rstart</button>
-    <div class="carousel-links">
+    <!-- <div class="carousel-links">
       <p>
         <a href="#carousel-cell1">Cell 1</a>,
         <a href="#carousel-cell2">Cell 2</a>,
@@ -72,10 +31,69 @@
         <a href="#carousel-cell4">Cell 4</a>,
         <a href="#carousel-cell5">Cell 5</a>
       </p>
-    </div>
+    </div> -->
 
-    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <p id="infos"></p>
+    <div id="map"></div>
+
+    <script>
+      var cellData = [
+        {
+          image: "images/side.png",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Side",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/100x100" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell1",
+          coords: { lat: 36.768019, lng: 31.390175 }
+        },
+        {
+          image: "images/batumi.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Batumi",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell2",
+          coords: { lat: 41.618253, lng: 41.636336 }
+        },
+        {
+          image: "images/lindos.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Lindos",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell3",
+          coords: { lat: 36.09198, lng: 28.088381 }
+        },
+        {
+          image: "images/edynburg.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Edinburgh",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell4",
+          coords: { lat: 55.948739, lng: -3.199924 }
+        },
+        {
+          image: "images/casablanca.jpg",
+          style: 'style="background-size: cover; width: 100%;"',
+          title: "Casablanca",
+          description:
+            '<p>Lorem ipsum.</p> <img src="http://via.placeholder.com/400x200" alt="Photo placeholder"> <p>Dolor sit.</p>',
+          cell: "carousel-cell5",
+          coords: { lat: 33.60862, lng: -7.632728 }
+        }
+      ];
+    </script>
+
     <script src="vendor/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-hash@1/hash.js"></script>
+    <script src="vendor/mustache.min.js"></script>
     <script src="js/script.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJUTPydGAimC-c88u_WQ1kCTegpHY52eM&callback=initMap"
+    ></script>
   </body>
 </html>
